@@ -1,0 +1,36 @@
+Example query on cli:
+
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0x011BD93B619E22619f4daD390c5e301E172D2C46","latest"],"id":1}' https://network-archive.ambrosus.io
+
+curl -X POST -H "Content-Type: application/json" --data '{
+    "jsonrpc":"2.0",
+    "method":"eth_getCode",
+    "params":["0x011BD93B619E22619f4daD390c5e301E172D2C46","latest"],
+    "id":1
+    }' https://network-archive.ambrosus.io
+
+
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"address":"0x011BD93B619E22619f4daD390c5e301E172D2C46","fromBlock":"0x0","toBlock":"latest"}],"id":1}' https://network-archive.ambrosus.io | tr ',' '\n'
+
+curl -X POST -H "Content-Type: application/json" --data '{
+    "jsonrpc":"2.0",
+    "method":"eth_getLogs",
+    "params":[{
+        "address":"0x011BD93B619E22619f4daD390c5e301E172D2C46", # It's possible without address placing a topic instead.
+        # "topics":["0x"], # filter for specific topics. Seems not to work with only 0x
+        "fromBlock":"0x0",
+        "toBlock":"latest"}],
+    "id":1
+    }' https://network-archive.ambrosus.io
+
+
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x19690E7267Adf28c11494248C3d5561bb7aeDBbA","latest"],"id":1}' https://network-archive.ambrosus.io
+
+curl -X POST -H "Content-Type: application/json" --data '{
+    "jsonrpc":"2.0",
+    "method":"eth_getBalance",
+    "params":["0x19690E7267Adf28c11494248C3d5561bb7aeDBbA","latest"],
+    "id":1}' https://network-archive.ambrosus.io
+
+
+BLOCK REWARDS???

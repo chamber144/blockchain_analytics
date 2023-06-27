@@ -1,0 +1,10 @@
+Manual: https://docs.syscoin.org/docs/dev-resources/documentation/javascript-sdk-ref/blockbook/
+
+Examples:
+https://blockbook.ambrosus.io/api/v2/address/0x3bD825b7Eb270b191d1C3886E2463159623C9EF5?page=2&pageSize=1000
+   -> gives back a json with: page, totalPages, itemsOnPage, address, balance, unconfirmedBalance, unconfirmedTxs, txs, nonTokenTxs, txids{ids}, nonce
+   -> if the address holds tokens it appends: tokens{0,1,2,3,...}. 
+     -> tokens[n] contain: type, name, contract, transfers, symbol, decimals, balance
+
+
+According to chatGPT the blockbook api has the following categories: address, xpub, utxo, tx, block, status, estimateFee
